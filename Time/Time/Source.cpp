@@ -35,11 +35,11 @@ Time Time::operator- (Time Time_2) {
 
 	Time TimeResult;
 
-	TimeResult.difference = abs((hour * 3600 + minute * 60 + second) - (Time_2.hour * 3600 + Time_2.minute * 60 + Time_2.second));
+	int result = abs((hour * 3600 + minute * 60 + second) - (Time_2.hour * 3600 + Time_2.minute * 60 + Time_2.second));
 
-	TimeResult.hour = TimeResult.difference / 3600;
-	TimeResult.minute = (TimeResult.difference - TimeResult.hour * 3600) / 60;
-	TimeResult.second = TimeResult.difference - TimeResult.hour * 3600 - TimeResult.minute * 60;
+	TimeResult.hour = result / 3600;
+	TimeResult.minute = (result - TimeResult.hour * 3600) / 60;
+	TimeResult.second = result - TimeResult.hour * 3600 - TimeResult.minute * 60;
 
 	return TimeResult;
 }

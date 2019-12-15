@@ -4,7 +4,6 @@ private:
 	int hour;
 	int minute;
 	int second;
-	int difference;
 public:
 	//Конструктор по умолчанию
 	Time() : hour(0), minute(0), second(0) {
@@ -22,10 +21,10 @@ public:
 	//Добавление секунд
 	void AddingSeconds(int s);
 
-	//Добавление секунд
+	//Добавление минут
 	void AddingMinutes(int s);
 
-	//Добавление секунд
+	//Добавление часов
 	void AddingHours(int s);
 
 	//Перевод времени в секунды
